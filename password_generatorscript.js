@@ -33,7 +33,6 @@ function generatePassword(lower, upper, number, symbol, length) {
 		return " ";
     }
     
-	
 	// create a loop to put here
 	for(let i=0; i<length; i+=typesCount) {
 		typesArr.forEach(type => {
@@ -45,10 +44,10 @@ function generatePassword(lower, upper, number, symbol, length) {
 	let finalPassword = generatedPassword.slice(0, length);
 	
     return window.alert(finalPassword);
-    
-    
+        
 }
 
+// randomization functions
 function getRandomLower() {
 	return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
@@ -65,3 +64,19 @@ function getRandomSymbol() {
 	let symbols = "!@#$%^&*(){}[]=<>/,.";
 	return symbols[Math.floor(Math.random() * symbols.length)];
 }
+
+// eliminating defaults
+let inputBox = document.querySelector("#length");
+
+let invalidChars = [
+  "-",
+  "+",
+  "e",
+  ".",
+];
+
+inputBox.addEventListener("keydown", function(e) {
+  if (invalidChars.includes(e.key)) {
+    e.preventDefault();
+  }
+});

@@ -11,20 +11,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!--Nav-->
+    <nav class="navbar navbar-dark bg-dark">
+      <span class="navbar-brand mb-0 h1">Password Gen</span>
+    </nav>
     <!--Card-->
     <div class="container">
       <div class="row">    
           <div class="col-lg-10">
-            <div class="card">
-                <div class="card-header">
-                  Password Generator
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">This password generator will allow you to set your own preferences! </h5>
-                  <p class="card-text">Click the button below to access the generator and get a new password!</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Click Me!</button>
-                </div>
-            </div>       
+            <div class="card" style="width: 50rem;">
+              <img src="https://bestantiviruspro.org/wp-content/uploads/2019/01/malware-detection-640x310.jpg" class="card-img-top" alt="Computer">
+              <div class="card-body">
+                <h5 class="card-title">Password Generator</h5>
+                <p class="card-text">Click the button below to access the password generator. Options available: 8-128 characters, uppercase/lowercase letters, numbers, and symbols!</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                  Access Generator
+                </button>
+              </div>
+            </div>      
           </div>      
       </div>        
     </div>
@@ -46,7 +50,7 @@
             <div class="settings">
               <div class="setting">
                 <label>Password length (8-128) </label>
-                <input type="number" id="length" min='8' max='128' value='20' />
+                <input type="number" id="length" min="8" max="128" value="20"/>
               </div>
               <div class="setting">
                 <label>Include uppercase letters </label> 
